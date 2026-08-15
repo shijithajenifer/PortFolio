@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shijitha Jenifer J | AI & Data Science Portfolio</title>
+  <meta name="description" content="Portfolio of Shijitha Jenifer J — AI & Data Science student interested in Data Engineering, AI/ML, analytics, and intelligent applications.">
+  <meta name="author" content="Shijitha Jenifer J">
+  <meta name="keywords" content="Shijitha Jenifer J, Data Engineering, AI, Data Science, Machine Learning, Python, SQL, Power BI, Portfolio">
+  
+  <!-- Open Graph / Social Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Shijitha Jenifer J | AI & Data Science Portfolio">
+  <meta property="og:description" content="AI & Data Science Student passionate about Data Engineering, Analytics, AI/ML, and building practical data-driven solutions.">
+  <meta property="og:url" content="https://shijithajenifer.github.io">
+  <meta name="theme-color" content="#070a11">
+
+  <!-- Google Fonts Preconnect & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/architecture.css">
+  <link rel="stylesheet" href="styles/animations.css">
+
+  <!-- JSON-LD Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shijitha Jenifer J",
+    "jobTitle": "AI & Data Science Student | Aspiring Data Engineer",
+    "email": "mailto:shijithajenifer2005@gmail.com",
+    "telephone": "+919043155325",
+    "url": "https://shijithajenifer.github.io",
+    "sameAs": [
+      "https://www.linkedin.com/in/shijitha-jenifer-j-0160b6327",
+      "https://github.com/shijithajenifer"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "VSB College of Engineering and Technical Campus, Coimbatore"
+    },
+    "knowsAbout": ["Data Engineering", "Data Analytics", "Artificial Intelligence", "Machine Learning", "Python", "SQL", "Power BI", "Java"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. NAVIGATION BAR
+       ========================================================================= -->
+  <header id="navbar" class="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-logo" aria-label="Shijitha Jenifer J Home">
+        <div class="nav-logo-badge">SJ</div>
+        <div class="nav-logo-text">Shijitha<span>.ai</span></div>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <ul id="navMenu" class="nav-menu" role="menubar">
+        <li role="none"><a href="#home" class="nav-link active" role="menuitem">Home</a></li>
+        <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+        <li role="none"><a href="#skills" class="nav-link" role="menuitem">Skills</a></li>
+        <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
+        <li role="none"><a href="#experience" class="nav-link" role="menuitem">Experience</a></li>
+        <li role="none"><a href="#patent" class="nav-link" role="menuitem">Patent</a></li>
+        <li role="none"><a href="#certifications" class="nav-link" role="menuitem">Certifications</a></li>
+        <li role="none"><a href="#education" class="nav-link" role="menuitem">Education</a></li>
+        <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-sm btn-secondary" onclick="handleResumeDownload(event)" aria-label="Download Resume">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <span>Resume</span>
+        </button>
+
+        <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         2. HERO SECTION
+         ========================================================================= -->
+    <section id="home" class="hero">
+      <canvas id="heroCanvas" class="hero-canvas"></canvas>
+      <div class="hero-glow-bg"></div>
+
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text-block reveal">
+            <div class="hero-intro">
+              <span class="hero-intro-dot"></span>
+              <span>Hi, I'm Shijitha Jenifer J</span>
+            </div>
+
+            <h1 class="hero-title">
+              AI & Data Science Student building <span class="hero-title-gradient">intelligent, data-driven solutions.</span>
+            </h1>
+
+            <p class="hero-description">
+              Final-year B.Tech AI & Data Science student passionate about Data Engineering, Analytics, AI/ML, and building practical solutions to real-world problems.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary btn-lg">
+                <span>View My Projects</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+
+              <button class="btn btn-secondary btn-lg" onclick="handleResumeDownload(event)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Download Resume</span>
+              </button>
+
+              <a href="#contact" class="btn btn-accent btn-lg">
+                <span>Let's Connect</span>
+              </a>
+            </div>
+
+            <div class="hero-tech-badges">
+              <span class="hero-tech-label">Core Technologies</span>
+              <div class="hero-badges-list">
+                <span class="tech-badge">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                  Java
+                </span>
+                <span class="tech-badge">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                  Python
+                </span>
+                <span class="tech-badge">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                  SQL
+                </span>
+                <span class="tech-badge">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                  Power BI
+                </span>
+                <span class="tech-badge">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                  AI / ML
+                </span>
+                <span class="tech-badge">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                  Data Engineering
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Profile Visual Container -->
+          <div class="hero-visual reveal reveal-delay-2">
+            <div class="profile-card-wrapper">
+              <div class="profile-frame-glow"></div>
+              <div class="profile-card">
+                <div class="profile-image-container">
+                  <div class="profile-image-inner">
+                    <!-- Clean fallback: loads user's profile.jpg, or shows professional monogram if absent -->
+                    <img src="assets/profile.jpg" alt="Shijitha Jenifer J - AI & Data Science Candidate" class="profile-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="eager">
+                    <div class="profile-fallback" style="display: none;">
+                      <span class="profile-monogram">SJ</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="profile-info">
+                  <h2 class="profile-name">Shijitha Jenifer J</h2>
+                  <div class="profile-role">AI & Data Science Candidate</div>
+                  <div class="profile-status">
+                    <span class="profile-status-dot"></span>
+                    <span>Open to Entry-Level & Internships</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll down to About section">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>SCROLL</span>
+      </a>
+    </section>
+
+    <!-- =========================================================================
+         3. ABOUT SECTION
+         ========================================================================= -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Candidate Profile</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Bridging theoretical computer science and data-driven intelligence.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left: Official Candidate Statement -->
+          <div class="about-card reveal reveal-left">
+            <p class="about-text">
+              I am a final-year Artificial Intelligence and Data Science student with a strong interest in Data Engineering, analytics, and AI-powered applications. I enjoy transforming raw data into meaningful insights and building practical solutions using programming, databases, visualization, and machine learning technologies.
+            </p>
+            <p class="about-text">
+              I am continuously strengthening my programming and problem-solving skills while exploring real-world applications of AI and data engineering.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Data Engineering Pipelines</span>
+              </div>
+              <div class="highlight-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Analytics & Visualization</span>
+              </div>
+              <div class="highlight-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>AI / Machine Learning</span>
+              </div>
+              <div class="highlight-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Software Development</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Compact Information Card -->
+          <div class="info-card reveal reveal-right">
+            <h3 class="info-card-title">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              <span>Key Information</span>
+            </h3>
+
+            <ul class="info-list">
+              <li class="info-item">
+                <span class="info-label">Degree</span>
+                <span class="info-value">B.Tech Artificial Intelligence & Data Science</span>
+              </li>
+              <li class="info-item">
+                <span class="info-label">Academic Performance</span>
+                <span class="info-value info-value-highlight">CGPA: 8.4</span>
+              </li>
+              <li class="info-item">
+                <span class="info-label">Graduation Year</span>
+                <span class="info-value">2027 (Final Year)</span>
+              </li>
+              <li class="info-item">
+                <span class="info-label">Institution</span>
+                <span class="info-value">VSB College of Engineering and Technical Campus</span>
+              </li>
+              <li class="info-item">
+                <span class="info-label">Location</span>
+                <span class="info-value">Coimbatore, Tamil Nadu, India</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. SKILLS SECTION
+         ========================================================================= -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Technical Competencies</span>
+          <h2 class="section-title">Skills & Technologies</h2>
+          <p class="section-subtitle">Verified tools, programming languages, and engineering concepts.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Programming -->
+          <div class="skill-category-card reveal reveal-delay-1">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <h3 class="skill-cat-title">Programming</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-item-tag">Java</span>
+              <span class="skill-item-tag">Python</span>
+            </div>
+          </div>
+
+          <!-- Data & Databases -->
+          <div class="skill-category-card reveal reveal-delay-2">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+              <h3 class="skill-cat-title">Data & Databases</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-item-tag">SQL</span>
+              <span class="skill-item-tag">SQLite</span>
+              <span class="skill-item-tag">Pandas</span>
+            </div>
+          </div>
+
+          <!-- Data Visualization -->
+          <div class="skill-category-card reveal reveal-delay-3">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              </div>
+              <h3 class="skill-cat-title">Data Visualization</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-item-tag">Power BI</span>
+              <span class="skill-item-tag">Streamlit</span>
+            </div>
+          </div>
+
+          <!-- AI / ML -->
+          <div class="skill-category-card reveal reveal-delay-4">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+              </div>
+              <h3 class="skill-cat-title">AI / ML</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-item-tag">NLP</span>
+              <span class="skill-item-tag">RAG</span>
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="skill-category-card reveal reveal-delay-1">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <h3 class="skill-cat-title">Professional Skills</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-item-tag">Teamwork</span>
+              <span class="skill-item-tag">Communication</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. FEATURED PROJECTS SECTION
+         ========================================================================= -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-title">Engineering Projects</h2>
+          <p class="section-subtitle">Real-world AI architectures and automated data pipelines.</p>
+        </div>
+
+        <div class="projects-container">
+          <!-- PROJECT 1: IT HELPDESK CHATBOT -->
+          <article class="project-card reveal">
+            <div class="project-content-grid">
+              <div class="project-info-side">
+                <div class="project-meta-top">
+                  <span class="project-tag">AI / NLP / RAG</span>
+                  <span class="timeline-period" style="font-size: 11px; padding: 2px 8px;">Nov 2025</span>
+                </div>
+
+                <h3 class="project-title">IT Helpdesk Chatbot</h3>
+                <p class="project-description">
+                  Built an AI-powered IT Helpdesk Chatbot that answers technical queries using information retrieved from PDF documents.
+                </p>
+
+                <div class="project-problem-solution">
+                  <div class="prob-sol-item">
+                    <span class="prob-sol-label">Problem:</span>
+                    <span>IT support teams spend excessive hours manually locating solutions across extensive technical documentation and manuals.</span>
+                  </div>
+                  <div class="prob-sol-item">
+                    <span class="prob-sol-label sol">Solution:</span>
+                    <span>Engineered a Retrieval-Augmented Generation (RAG) assistant that queries embedded PDF manuals to return fast, fact-grounded troubleshooting answers.</span>
+                  </div>
+                </div>
+
+                <ul class="project-points-list">
+                  <li class="project-point">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Implemented Retrieval-Augmented Generation architecture</span>
+                  </li>
+                  <li class="project-point">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Extracted knowledge from PDF documents</span>
+                  </li>
+                  <li class="project-point">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Used Sentence Transformer embeddings for semantic search</span>
+                  </li>
+                  <li class="project-point">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Used FAISS for high-performance semantic similarity search</span>
+                  </li>
+                  <li class="project-point">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Created an interactive Streamlit interface for conversational querying</span>
+                  </li>
+                  <li class="project-point">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Focused on accurate document-based responses with zero hallucinations</span>
+                  </li>
+                </ul>
+
+                <div class="project-tech-stack">
+                  <span class="tech-badge">Python</span>
+                  <span class="tech-badge">Streamlit</span>
+                  <span class="tech-badge">FAISS</span>
+                  <span class="tech-badge">NLP</span>
+                  <span class="tech-badge">Sentence Transformers</span>
+                  <span class="tech-badge">RAG</span>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://github.com/shijithajenifer" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" aria-label="View IT Helpdesk Chatbot repository on GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    <span>GitHub Repository</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Technical Visual: RAG Architecture Flow -->
+              <div class="project-visual-side">
+                <div class="arch-visual-container">
+                  <div class="arch-visual-header">
+                    <div class="arch-visual-title">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                      <span>RAG Technical Architecture</span>
+                    </div>
+                    <span class="arch-status-pill"><span class="arch-status-dot"></span> Pipeline Flow</span>
+                  </div>
+
+                  <div class="pipeline-flow">
+                    <div class="pipeline-step" data-step="rag-1">
+                      <div class="step-num">1</div>
+                      <div class="step-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                      </div>
+                      <div class="step-info">
+                        <div class="step-title">PDF Documents</div>
+                        <div class="step-sub">Raw Knowledge Source</div>
+                      </div>
+                    </div>
+
+                    <div class="step-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+
+                    <div class="pipeline-step" data-step="rag-2">
+                      <div class="step-num">2</div>
+                      <div class="step-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="21" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="3" y2="18"></line></svg>
+                      </div>
+                      <div class="step-info">
+                        <div class="step-title">Text Processing</div>
+                        <div class="step-sub">Chunking & Tokenization</div>
+                      </div>
+                    </div>
+
+                    <div class="step-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+
+                    <div class="pipeline-step" data-step="rag-3">
+                      <div class="step-num">3</div>
+                      <div class="step-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path></svg>
+                      </div>
+                      <div class="step-info">
+                        <div class="step-title">Embeddings (Sentence Transformers)</div>
+                        <div class="step-sub">Vector Encoding</div>
+                      </div>
+                    </div>
+
+                    <div class="step-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+
+                    <div class="pipeline-step" data-step="rag-4">
+                      <div class="step-num">4</div>
+                      <div class="step-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                      </div>
+                      <div class="step-info">
+                        <div class="step-title">FAISS Vector Database</div>
+                        <div class="step-sub">Similarity Index</div>
+                      </div>
+                    </div>
+
+                    <div class="step-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+
+                    <div class="pipeline-step" data-step="rag-5">
+                      <div class="step-num">5</div>
+                      <div class="step-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                      </div>
+                      <div class="step-info">
+                        <div class="step-title">Retrieval & Context Matching</div>
+                        <div class="step-sub">User Query Matching</div>
+                      </div>
+                    </div>
+
+                    <div class="step-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+
+                    <div class="pipeline-step" data-step="rag-6">
+                      <div class="step-num">6</div>
+                      <div class="step-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                      </div>
+                      <div class="step-info">
+                        <div class="step-title">Streamlit UI & Grounded Response</div>
+                        <div class="step-sub">Accurate Output Delivery</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pipeline-tooltip">Click any stage above to inspect details.</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: REAL-TIME STOCK DATA ETL PIPELINE -->
+          <article class="project-card reveal">
+            <div class="project-content-grid">
+              <div class="project-info-side">
+                <div class="project-meta-top">
+                  <span class="project-tag">Data Engineering / ETL</span>
+                  <span class="timeline-period" style="font-size: 11px; padding: 2px 8px;">Jun 2025</span>
+                </div>
+
+                <h3 class="project-title">Real-Time Stock Data ETL Pipeline</h3>
+                <p class="project-description">
+                  Built an end-to-end pipeline to extract, transform, and load real-time stock data using Python.
+                </p>
+
+                <div class="project-problem-solution">
+                  <div class="prob-sol-item">
+                    <span class="prob-sol-label">Problem:</span>
+                    <span>High-velocity financial markets produce inconsistent, uncleaned live data streams that are challenging to ingest and analyze in real-time.</span>
+                  </div>
+                  <div class="prob-sol-item">
+                    <span class="prob-sol-label sol">Solution:</span>
+                    <span>Engineered an automated Python data pipeline that continuously fetches stock quotes, standardizes records using Pandas, and populates SQLite for live dashboarding.</span>
+                  </div>
+                </div>
+
+                <ul class="project-points-list">
+                  <li class="project-point">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Extracted stock data from real-time feeds</span>
+                  </li>
+                  <li class="project-point">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Performed automated data cleaning and transformation using Pandas</span>
+                  </li>
+                  <li class="project-point">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Stored clean, structured records in SQLite relational database</span>
+                  </li>
+                  <li class="project-point">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Created an interactive Streamlit dashboard for real-time visualization</span>
+                  </li>
+                  <li class="project-point">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Demonstrated data engineering and real-time analytics concepts</span>
+                  </li>
+                </ul>
+
+                <div class="project-tech-stack">
+                  <span class="tech-badge">Python</span>
+                  <span class="tech-badge">Pandas</span>
+                  <span class="tech-badge">SQLite</span>
+                  <span class="tech-badge">Streamlit</span>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://github.com/shijithajenifer" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" aria-label="View Real-Time Stock Data ETL Pipeline on GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    <span>GitHub Repository</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Technical Visual: ETL Pipeline Flow -->
+              <div class="project-visual-side">
+                <div class="arch-visual-container">
+                  <div class="arch-visual-header">
+                    <div class="arch-visual-title">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                      <span>ETL Pipeline Architecture</span>
+                    </div>
+                    <span class="arch-status-pill"><span class="arch-status-dot"></span> Pipeline Flow</span>
+                  </div>
+
+                  <div class="pipeline-flow">
+                    <div class="pipeline-step" data-step="etl-1">
+                      <div class="step-num">1</div>
+                      <div class="step-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                      </div>
+                      <div class="step-info">
+                        <div class="step-title">Data Source (Market Feed)</div>
+                        <div class="step-sub">Incoming Financial Data</div>
+                      </div>
+                    </div>
+
+                    <div class="step-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+
+                    <div class="pipeline-step" data-step="etl-2">
+                      <div class="step-num">2</div>
+                      <div class="step-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                      </div>
+                      <div class="step-info">
+                        <div class="step-title">Extract Layer</div>
+                        <div class="step-sub">Automated Ingestion</div>
+                      </div>
+                    </div>
+
+                    <div class="step-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+
+                    <div class="pipeline-step" data-step="etl-3">
+                      <div class="step-num">3</div>
+                      <div class="step-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                      </div>
+                      <div class="step-info">
+                        <div class="step-title">Transform (Pandas)</div>
+                        <div class="step-sub">Automated Cleaning & Schema</div>
+                      </div>
+                    </div>
+
+                    <div class="step-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+
+                    <div class="pipeline-step" data-step="etl-4">
+                      <div class="step-num">4</div>
+                      <div class="step-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+                      </div>
+                      <div class="step-info">
+                        <div class="step-title">Load Pipeline</div>
+                        <div class="step-sub">Structured Insertion</div>
+                      </div>
+                    </div>
+
+                    <div class="step-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+
+                    <div class="pipeline-step" data-step="etl-5">
+                      <div class="step-num">5</div>
+                      <div class="step-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                      </div>
+                      <div class="step-info">
+                        <div class="step-title">SQLite Database</div>
+                        <div class="step-sub">Relational Persistence</div>
+                      </div>
+                    </div>
+
+                    <div class="step-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+
+                    <div class="pipeline-step" data-step="etl-6">
+                      <div class="step-num">6</div>
+                      <div class="step-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                      </div>
+                      <div class="step-info">
+                        <div class="step-title">Streamlit Dashboard</div>
+                        <div class="step-sub">Real-Time Analytics</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pipeline-tooltip">Click any stage above to inspect details.</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. PATENT & INNOVATION ACHIEVEMENT
+         ========================================================================= -->
+    <section id="patent" class="section patent-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Key Achievement</span>
+          <h2 class="section-title">Patent & Innovation</h2>
+          <p class="section-subtitle">Intellectual property and architectural research.</p>
+        </div>
+
+        <div class="patent-card reveal">
+          <div class="patent-content-grid">
+            <div class="patent-text-col">
+              <div class="patent-badge-banner">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <span>Patent Achievement</span>
+              </div>
+
+              <h3 class="patent-title">Aegis AI – Intelligent Cyber Resilience Framework</h3>
+              <p class="patent-desc">
+                An intelligent cybersecurity framework designed to bolster cyber resilience through autonomous telemetry analysis, adaptive anomaly detection, and systematic mitigation protocols.
+              </p>
+
+              <div class="patent-meta-grid">
+                <div class="patent-meta-box">
+                  <div class="patent-meta-label">Domain</div>
+                  <div class="patent-meta-value">Artificial Intelligence & Cyber Resilience</div>
+                </div>
+                <div class="patent-meta-box">
+                  <div class="patent-meta-label">Classification</div>
+                  <div class="patent-meta-value">Framework & Autonomous Architecture</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Visual Graphic for Cyber Resilience -->
+            <div class="patent-visual-col">
+              <div class="patent-visual-container">
+                <div class="patent-shield-graphic">
+                  <div class="shield-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  </div>
+                </div>
+
+                <div class="patent-steps-list">
+                  <div class="patent-step-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                    <div><span>Telemetry Ingestion:</span> System behavior monitoring</div>
+                  </div>
+                  <div class="patent-step-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path></svg>
+                    <div><span>Anomaly Detection:</span> Intelligent threat identification</div>
+                  </div>
+                  <div class="patent-step-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    <div><span>Resilience Protocol:</span> Autonomous mitigation</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. EXPERIENCE & INTERNSHIPS TIMELINE
+         ========================================================================= -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Hands-On Practice</span>
+          <h2 class="section-title">Internship Experience</h2>
+          <p class="section-subtitle">Practical industry exposure across manufacturing and data science domains.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Roots Industries -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-company">Roots Industries India Ltd — Coimbatore</h3>
+                <span class="timeline-period">June – July 2025</span>
+              </div>
+              <div class="timeline-role">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                <span>Data Analysis / ML Internship</span>
+              </div>
+              <p class="timeline-desc">
+                Applied data analysis and machine learning techniques in manufacturing workflows.
+              </p>
+            </div>
+          </div>
+
+          <!-- Techvolt Software -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-company">Techvolt Software Pvt. Ltd. — Coimbatore</h3>
+                <span class="timeline-period">April 2024</span>
+              </div>
+              <div class="timeline-role">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                <span>Data Science Internship</span>
+              </div>
+              <p class="timeline-desc">
+                Gained hands-on exposure to data preprocessing, visualization, and model building.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. CERTIFICATIONS SECTION
+         ========================================================================= -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Credentials</span>
+          <h2 class="section-title">Certifications</h2>
+          <p class="section-subtitle">Verified programs completed from reputed institutions and industry platforms.</p>
+        </div>
+
+        <div class="cert-grid">
+          <!-- Power BI -->
+          <div class="cert-card reveal reveal-delay-1">
+            <div>
+              <div class="cert-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              </div>
+              <h3 class="cert-title">Power BI</h3>
+              <div class="cert-issuer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span>Internshala</span>
+              </div>
+            </div>
+            <div class="cert-badge-tag">Data Visualization & BI</div>
+          </div>
+
+          <!-- AI For Beginners -->
+          <div class="cert-card reveal reveal-delay-2">
+            <div>
+              <div class="cert-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+              </div>
+              <h3 class="cert-title">AI For Beginners</h3>
+              <div class="cert-issuer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span>HP Life</span>
+              </div>
+            </div>
+            <div class="cert-badge-tag">Artificial Intelligence Concepts</div>
+          </div>
+
+          <!-- Explore ML using Python -->
+          <div class="cert-card reveal reveal-delay-3">
+            <div>
+              <div class="cert-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              </div>
+              <h3 class="cert-title">Explore Machine Learning Using Python</h3>
+              <div class="cert-issuer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span>Infosys Springboard</span>
+              </div>
+            </div>
+            <div class="cert-badge-tag">Machine Learning & Python</div>
+          </div>
+
+          <!-- NPTEL Cloud Computing -->
+          <div class="cert-card reveal reveal-delay-4">
+            <div>
+              <div class="cert-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+              </div>
+              <h3 class="cert-title">NPTEL – Cloud Computing</h3>
+              <div class="cert-issuer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span>IIT Kharagpur</span>
+              </div>
+            </div>
+            <div class="cert-badge-tag">Cloud Infrastructure & Systems</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. EDUCATION SECTION
+         ========================================================================= -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Academic Background</span>
+          <h2 class="section-title">Education</h2>
+          <p class="section-subtitle">Formal foundation in Artificial Intelligence and Data Science.</p>
+        </div>
+
+        <div class="edu-grid">
+          <!-- B.Tech Degree -->
+          <div class="edu-card reveal reveal-left">
+            <div class="edu-period">2023 – 2027 (Final Year)</div>
+            <h3 class="edu-degree">B.Tech Artificial Intelligence and Data Science</h3>
+            <p class="edu-institution">VSB College of Engineering and Technical Campus, Coimbatore</p>
+            <div class="edu-score-badge">
+              Academic Performance: <span>CGPA 8.4</span>
+            </div>
+          </div>
+
+          <!-- Higher Secondary -->
+          <div class="edu-card reveal reveal-right">
+            <div class="edu-period">Completed March 2023</div>
+            <h3 class="edu-degree">Higher Secondary Education</h3>
+            <p class="edu-institution">Infant Jesus Matriculation Higher Secondary School</p>
+            <div class="edu-score-badge">
+              Final Score: <span>73.3%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         10. CONTACT SECTION
+         ========================================================================= -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-wrapper reveal">
+          <div class="contact-grid">
+            <div class="contact-header-content">
+              <div>
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="contact-headline">Let's build something meaningful with data and AI.</h2>
+                <p class="contact-subtext">
+                  I'm open to opportunities, collaborations, internships, and entry-level roles in AI, Data Engineering, Data Analytics, and Software Development.
+                </p>
+              </div>
+
+              <div class="contact-cta-buttons">
+                <button class="btn btn-primary btn-lg" onclick="handleResumeDownload(event)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  <span>Download Resume</span>
+                </button>
+                <a href="mailto:shijithajenifer2005@gmail.com" class="btn btn-accent btn-lg">
+                  <span>Let's Connect</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Direct Contact Methods -->
+            <div class="contact-methods">
+              <!-- Email Item with Copy Trigger -->
+              <a href="mailto:shijithajenifer2005@gmail.com" class="contact-card-item" aria-label="Send email to shijithajenifer2005@gmail.com">
+                <div class="contact-card-left">
+                  <div class="contact-icon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div class="contact-info-text">
+                    <span class="contact-type-label">Email</span>
+                    <span class="contact-direct-value">shijithajenifer2005@gmail.com</span>
+                  </div>
+                </div>
+                <button type="button" class="contact-action-btn" onclick="event.preventDefault(); event.stopPropagation(); copyEmail();" title="Copy email address" aria-label="Copy email">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </button>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/shijitha-jenifer-j-0160b6327" target="_blank" rel="noopener noreferrer" class="contact-card-item" aria-label="Open LinkedIn profile">
+                <div class="contact-card-left">
+                  <div class="contact-icon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  </div>
+                  <div class="contact-info-text">
+                    <span class="contact-type-label">LinkedIn</span>
+                    <span class="contact-direct-value">linkedin.com/in/shijitha-jenifer-j-0160b6327</span>
+                  </div>
+                </div>
+                <div class="contact-action-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </div>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/shijithajenifer" target="_blank" rel="noopener noreferrer" class="contact-card-item" aria-label="Open GitHub profile">
+                <div class="contact-card-left">
+                  <div class="contact-icon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </div>
+                  <div class="contact-info-text">
+                    <span class="contact-type-label">GitHub</span>
+                    <span class="contact-direct-value">github.com/shijithajenifer</span>
+                  </div>
+                </div>
+                <div class="contact-action-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </div>
+              </a>
+
+              <!-- Phone -->
+              <a href="tel:9043155325" class="contact-card-item" aria-label="Call phone number +91 9043155325">
+                <div class="contact-card-left">
+                  <div class="contact-icon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  </div>
+                  <div class="contact-info-text">
+                    <span class="contact-type-label">Phone</span>
+                    <span class="contact-direct-value">+91 9043155325</span>
+                  </div>
+                </div>
+                <div class="contact-action-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       11. FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="footer-name">Shijitha Jenifer J</div>
+        <div class="footer-role">AI & Data Science Student | Aspiring Data Engineer</div>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://github.com/shijithajenifer" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub Profile">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/shijitha-jenifer-j-0160b6327" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn Profile">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="mailto:shijithajenifer2005@gmail.com" class="footer-social-link" aria-label="Send Email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+      </div>
+
+      <div class="footer-copy">
+        © 2026 Shijitha Jenifer J. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       12. RESUME MODAL & TOAST COMPONENT
+       ========================================================================= -->
+  <div id="resumeModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+    <div class="modal-box">
+      <button id="closeResumeBtn" class="modal-close-btn" aria-label="Close modal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <h3 id="resumeModalTitle" class="modal-title">Resume — Shijitha Jenifer J</h3>
+      <p class="modal-desc">
+        Final-Year B.Tech AI & Data Science Candidate (CGPA 8.4) with experience in Data Engineering, AI/ML, and RAG architectures.
+      </p>
+
+      <div class="modal-guide-box">
+        <strong>PDF Resume Integration:</strong>
+        <p style="margin-top: 6px;">To link your official PDF resume, simply place your file named <code>resume.pdf</code> into the <code>assets/</code> folder: <code>Portfolio/assets/resume.pdf</code>.</p>
+      </div>
+
+      <div class="modal-actions">
+        <button id="modalCloseAction" class="btn btn-secondary btn-sm">Close</button>
+        <a href="mailto:shijithajenifer2005@gmail.com?subject=Request%20for%20Resume%20-%20Shijitha%20Jenifer%20J" class="btn btn-accent btn-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>Email Request</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Feedback -->
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+    <span class="toast-message">Copied to clipboard</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="scripts/particles.js"></script>
+  <script src="scripts/interactive.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
