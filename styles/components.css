@@ -738,6 +738,86 @@
 }
 
 /* --------------------------------------------------------------------------
+   5.5. WHAT I BRING (PROFESSIONAL STRENGTHS) SECTION
+   -------------------------------------------------------------------------- */
+.strengths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.strength-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  position: relative;
+  overflow: hidden;
+}
+
+.strength-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-accent);
+  background: var(--bg-card-hover);
+  box-shadow: var(--shadow-lg);
+}
+
+.strength-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.strength-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--accent-cyan-dim);
+  color: var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.strength-title {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.strength-desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.strength-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: auto;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.strength-pill {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--accent-cyan);
+  background: rgba(56, 189, 248, 0.06);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+/* --------------------------------------------------------------------------
    6. FEATURED PROJECTS SECTION
    -------------------------------------------------------------------------- */
 .projects-container {
@@ -817,7 +897,7 @@
 
 .prob-sol-item {
   font-size: var(--text-xs);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .prob-sol-label {
@@ -827,10 +907,20 @@
   font-size: 11px;
   letter-spacing: 0.05em;
   margin-right: 6px;
+  display: inline-block;
+  min-width: 80px;
+}
+
+.prob-sol-label.tech {
+  color: #c084fc;
 }
 
 .prob-sol-label.sol {
   color: var(--accent-cyan);
+}
+
+.prob-sol-label.res {
+  color: var(--accent-emerald);
 }
 
 .project-points-list {
@@ -1053,6 +1143,38 @@
   font-size: var(--text-sm);
   color: var(--text-secondary);
   line-height: 1.6;
+  margin-bottom: var(--space-3);
+}
+
+.timeline-tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: var(--space-4);
+}
+
+.timeline-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.timeline-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.timeline-bullet-item svg {
+  width: 15px;
+  height: 15px;
+  color: var(--accent-cyan);
+  flex-shrink: 0;
+  margin-top: 3px;
 }
 
 /* --------------------------------------------------------------------------

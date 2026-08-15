@@ -57,31 +57,15 @@
 
   window.handleResumeDownload = function (e) {
     if (e) e.preventDefault();
-    
-    // Check if resume.pdf exists by initiating download attempt
     const resumePath = 'assets/resume.pdf';
-    
-    // Try to trigger download
     const link = document.createElement('a');
     link.href = resumePath;
     link.download = 'Shijitha_Jenifer_J_Resume.pdf';
     link.target = '_blank';
-    
-    // Open resume helper modal if PDF is not placed yet or as an informational preview
-    fetch(resumePath, { method: 'HEAD' })
-      .then(response => {
-        if (response.ok) {
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-          window.showToast('Downloading Shijitha Jenifer J Resume (PDF)...');
-        } else {
-          openResumeModal();
-        }
-      })
-      .catch(() => {
-        openResumeModal();
-      });
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.showToast('Downloading Shijitha Jenifer J Resume (PDF)...');
   };
 
   function openResumeModal() {
