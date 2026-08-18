@@ -1,6 +1,6 @@
 /* ==========================================================================
    ANIMATIONS.CSS - KEYFRAMES, SCROLL REVEALS & MOTION ACCESSIBILITY
-   Shijitha Jenifer J - Personal Portfolio
+   Shijitha Jenifer J - Personal Portfolio (Charcoal + Gold Theme)
    ========================================================================== */
 
 /* Keyframe Animations */
@@ -55,10 +55,10 @@
 
 @keyframes glowPulse {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(201, 107, 75, 0.18);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.18);
   }
   50% {
-    box-shadow: 0 0 35px rgba(201, 107, 75, 0.35);
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.35);
   }
 }
 

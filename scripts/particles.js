@@ -1,5 +1,5 @@
 /**
- * particles.js - Subtle AI/Data Stream Particle Network
+ * particles.js - Subtle AI/Data Stream Particle Network (Charcoal + Gold)
  * Shijitha Jenifer J - Personal Portfolio
  */
 
@@ -46,7 +46,7 @@
       this.vx = (Math.random() - 0.5) * 0.45;
       this.vy = (Math.random() - 0.5) * 0.45;
       this.radius = Math.random() * 1.5 + 1;
-      this.baseColor = Math.random() > 0.4 ? 'rgba(201, 107, 75,' : 'rgba(216, 195, 165,';
+      this.baseColor = Math.random() > 0.4 ? 'rgba(212, 175, 55,' : 'rgba(240, 201, 74,';
       this.alpha = Math.random() * 0.45 + 0.2;
     }
 
@@ -97,7 +97,7 @@
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(201, 107, 75, ${opacity})`;
+          ctx.strokeStyle = `rgba(212, 175, 55, ${opacity})`;
           ctx.lineWidth = 0.8;
           ctx.stroke();
         }
