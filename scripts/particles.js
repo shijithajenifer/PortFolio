@@ -46,8 +46,8 @@
       this.vx = (Math.random() - 0.5) * 0.45;
       this.vy = (Math.random() - 0.5) * 0.45;
       this.radius = Math.random() * 1.5 + 1;
-      this.baseColor = Math.random() > 0.4 ? 'rgba(56, 189, 248,' : 'rgba(99, 102, 241,';
-      this.alpha = Math.random() * 0.5 + 0.2;
+      this.baseColor = Math.random() > 0.4 ? 'rgba(201, 107, 75,' : 'rgba(216, 195, 165,';
+      this.alpha = Math.random() * 0.45 + 0.2;
     }
 
     update() {
@@ -93,11 +93,11 @@
         const dist = Math.sqrt(dx * dx + dy * dy);
 
         if (dist < maxDistance) {
-          const opacity = (1 - dist / maxDistance) * 0.15;
+          const opacity = (1 - dist / maxDistance) * 0.18;
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(56, 189, 248, ${opacity})`;
+          ctx.strokeStyle = `rgba(201, 107, 75, ${opacity})`;
           ctx.lineWidth = 0.8;
           ctx.stroke();
         }

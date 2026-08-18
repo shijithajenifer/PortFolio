@@ -65,6 +65,6 @@ Portfolio/
 
 - **Authentic & Verifiable**: Real details only (VSB College, CGPA 8.4, Roots Industries & Techvolt internships, Aegis AI patent, 4 certifications, RAG & ETL projects).
 - **Technical Architecture Visuals**: Interactive SVG/CSS step-by-step pipeline diagrams for the **IT Helpdesk Chatbot** and **Real-Time Stock Data ETL Pipeline**.
-- **Dark Developer Aesthetic**: Modern dark charcoal palette (`#070a11`) with electric cyan/indigo accents and subtle glassmorphism.
+- **Editorial-Tech Aesthetic**: Distinctive professional palette (Warm Ivory `#F5EFE6`, Deep Forest Green `#26352A`, Terracotta `#C96B4B`, Soft Sand `#D8C3A5`, Charcoal `#292622`).
 - **Fast & Responsive**: 100% responsive across mobile, tablet, laptop, and 4K desktop screens with zero layout shifts.
 - **Accessibility & SEO Ready**: Semantic HTML5, Schema.org JSON-LD structured data, keyboard navigation, and reduced-motion support.
