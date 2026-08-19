@@ -5,34 +5,36 @@
 
 :root {
   /* ==========================================================================
-     COLOR PALETTE - DEEP PLUM & SPARKLING BURGUNDY THEME
-     #462435 - Deep Plum (Primary Background)
-     #743749 - Muted Burgundy (Atmospheric Orbs, Card Outlines & Depth)
-     #B22C45 - Rich Crimson (Primary Glows, Key Accents & Sparkles)
-     #CB3A35 - Warm Red (Sparkle Highlights & Hover States)
-     #E8592A - Vibrant Orange (Twinkling Stars & Focal Sparkle Points)
+     COLOR PALETTE - MODERN BLACK + BURGUNDY, CRIMSON & ORANGE ACCENTS
+     #000000 - Primary Background Black
+     #462435 - Deep Plum
+     #743749 - Muted Burgundy
+     #B22C45 - Rich Crimson
+     #CB3A35 - Warm Red
+     #E8592A - Vibrant Orange
      ========================================================================== */
-  --bg-primary: #462435;
-  --bg-secondary: #3a1d2c;
-  --bg-card: rgba(58, 29, 44, 0.75);
-  --bg-card-hover: rgba(78, 38, 58, 0.88);
-  --bg-card-solid: #3a1d2c;
-  --bg-surface: rgba(70, 36, 53, 0.65);
-  --bg-surface-active: rgba(178, 44, 69, 0.18);
+  --bg-primary: #000000;
+  --bg-secondary: #080306;
+  --bg-card: rgba(70, 36, 53, 0.16);
+  --bg-card-hover: rgba(116, 55, 73, 0.28);
+  --bg-card-solid: #0d0509;
+  --bg-surface: rgba(70, 36, 53, 0.24);
+  --bg-surface-active: rgba(178, 44, 69, 0.2);
 
   /* Contrast / Elevated Dark Sections */
-  --bg-dark-section: #341926;
-  --bg-dark-card: rgba(54, 26, 40, 0.82);
-  --bg-dark-surface: rgba(116, 55, 73, 0.22);
+  --bg-dark-section: #050204;
+  --bg-dark-card: rgba(70, 36, 53, 0.22);
+  --bg-dark-surface: rgba(116, 55, 73, 0.18);
 
-  /* Borders & Dividers */
-  --border-subtle: rgba(116, 55, 73, 0.35);
-  --border-medium: rgba(116, 55, 73, 0.58);
-  --border-dark: #582836;
-  --border-accent: rgba(178, 44, 69, 0.55);
+  /* Borders & Dividers - Subtle low-opacity burgundy/crimson/warm red */
+  --border-subtle: rgba(116, 55, 73, 0.24);
+  --border-medium: rgba(116, 55, 73, 0.42);
+  --border-dark: rgba(70, 36, 53, 0.5);
+  --border-accent: rgba(178, 44, 69, 0.45);
   --border-accent-strong: #B22C45;
 
-  /* Specific Named Colors */
+  /* Named Palette Colors */
+  --color-black: #000000;
   --color-plum: #462435;
   --color-burgundy: #743749;
   --color-crimson: #B22C45;
@@ -40,37 +42,37 @@
   --color-orange: #E8592A;
 
   /* Primary Accent & Glows */
-  --accent-gold: #B22C45; /* Rich Crimson as primary accent */
-  --accent-gold-hover: #CB3A35; /* Warm Red on hover */
-  --accent-gold-dim: rgba(178, 44, 69, 0.18);
+  --accent-gold: #B22C45; /* Crimson */
+  --accent-gold-hover: #CB3A35; /* Warm Red */
+  --accent-gold-dim: rgba(178, 44, 69, 0.14);
   --accent-crimson: #B22C45;
-  --accent-crimson-dim: rgba(178, 44, 69, 0.18);
+  --accent-crimson-dim: rgba(178, 44, 69, 0.14);
   --accent-warm-red: #CB3A35;
-  --accent-warm-red-dim: rgba(203, 58, 53, 0.18);
+  --accent-warm-red-dim: rgba(203, 58, 53, 0.14);
   --accent-orange: #E8592A;
-  --accent-orange-dim: rgba(232, 89, 42, 0.18);
+  --accent-orange-dim: rgba(232, 89, 42, 0.14);
 
-  --accent-glow: 0 0 28px rgba(178, 44, 69, 0.35);
-  --accent-glow-sm: 0 0 14px rgba(203, 58, 53, 0.28);
-  --accent-glow-orange: 0 0 18px rgba(232, 89, 42, 0.4);
+  --accent-glow: 0 0 28px rgba(178, 44, 69, 0.3);
+  --accent-glow-sm: 0 0 14px rgba(232, 89, 42, 0.25);
+  --accent-glow-orange: 0 0 20px rgba(232, 89, 42, 0.35);
   --accent-gradient: linear-gradient(135deg, #B22C45 0%, #CB3A35 50%, #E8592A 100%);
-  --accent-gradient-text: linear-gradient(135deg, #E8592A 0%, #CB3A35 45%, #B22C45 100%);
-  --accent-gradient-subtle: linear-gradient(135deg, rgba(116, 55, 73, 0.4) 0%, rgba(178, 44, 69, 0.25) 50%, rgba(232, 89, 42, 0.15) 100%);
+  --accent-gradient-text: linear-gradient(90deg, #B22C45 0%, #CB3A35 50%, #E8592A 100%);
+  --accent-gradient-subtle: linear-gradient(135deg, rgba(70, 36, 53, 0.3) 0%, rgba(178, 44, 69, 0.18) 50%, rgba(232, 89, 42, 0.1) 100%);
 
   /* Backward-compatible variable aliases */
   --accent-terracotta: #CB3A35;
-  --accent-terracotta-dim: rgba(203, 58, 53, 0.18);
+  --accent-terracotta-dim: rgba(203, 58, 53, 0.14);
   --accent-green: #743749;
-  --accent-green-dim: rgba(116, 55, 73, 0.18);
-  --accent-sand: #D8CCD1;
-  --accent-sand-dim: rgba(178, 44, 69, 0.12);
+  --accent-green-dim: rgba(116, 55, 73, 0.14);
+  --accent-sand: #D4D4D4;
+  --accent-sand-dim: rgba(178, 44, 69, 0.1);
 
-  /* Typography Colors - Pristine Contrast against Plum */
-  --text-primary: #FDF9FA;
-  --text-secondary: #D8CCD1;
-  --text-muted: #A8959E;
-  --text-inverse: #FDF9FA;
-  --text-dark: #462435;
+  /* Typography Colors */
+  --text-primary: #FFFFFF;
+  --text-secondary: #D4D4D4;
+  --text-muted: #8E8287;
+  --text-inverse: #FFFFFF;
+  --text-dark: #000000;
 
   /* Typography Fonts */
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -114,11 +116,11 @@
   --radius-xl: 22px;
   --radius-full: 9999px;
 
-  /* Shadows - Refined Deep Plum & Crimson Elevation */
-  --shadow-sm: 0 2px 8px rgba(35, 15, 25, 0.45);
-  --shadow-md: 0 6px 20px rgba(35, 15, 25, 0.55);
-  --shadow-lg: 0 14px 38px rgba(25, 10, 18, 0.65);
-  --shadow-card: 0 4px 24px rgba(35, 15, 25, 0.45);
+  /* Shadows - Subtle dark elevation with delicate crimson aura */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.6);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.75);
+  --shadow-lg: 0 14px 40px rgba(0, 0, 0, 0.9);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.6);
 
   /* Transitions */
   --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
@@ -156,7 +158,7 @@ body {
 
 /* Selection */
 ::selection {
-  background-color: rgba(178, 44, 69, 0.4);
+  background-color: rgba(178, 44, 69, 0.35);
   color: #FFFFFF;
 }
 
@@ -166,11 +168,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-primary);
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #743749;
+  background: #462435;
   border-radius: 4px;
 }
 
