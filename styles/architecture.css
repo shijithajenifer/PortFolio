@@ -1,10 +1,12 @@
 /* ==========================================================================
    ARCHITECTURE.CSS - TECHNICAL SVG & PIPELINE VISUALIZATIONS
-   Shijitha Jenifer J - Personal Portfolio (Charcoal + Gold Theme)
+   Shijitha Jenifer J - Personal Portfolio (Deep Plum + Crimson/Orange Theme)
    ========================================================================== */
 
 .arch-visual-container {
   background: var(--bg-secondary);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
@@ -37,9 +39,9 @@
 .arch-status-pill {
   font-size: 11px;
   font-family: var(--font-mono);
-  color: var(--accent-gold);
-  background: var(--accent-gold-dim);
-  border: 1px solid var(--border-accent);
+  color: var(--accent-orange);
+  background: var(--accent-orange-dim);
+  border: 1px solid rgba(232, 89, 42, 0.35);
   padding: 2px 8px;
   border-radius: var(--radius-full);
   display: inline-flex;
@@ -51,7 +53,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--accent-gold);
+  background: var(--accent-orange);
   animation: pulse-dot 1.8s infinite ease-in-out;
 }
 
@@ -69,6 +71,7 @@
   gap: var(--space-3);
   padding: 10px 14px;
   background: var(--bg-card);
+  backdrop-filter: blur(10px);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
@@ -77,9 +80,10 @@
 }
 
 .pipeline-step:hover, .pipeline-step.active {
-  border-color: var(--accent-gold);
+  border-color: var(--accent-crimson);
   background: var(--bg-card-hover);
   transform: translateX(4px);
+  box-shadow: 0 4px 16px rgba(178, 44, 69, 0.25);
 }
 
 .step-num {
@@ -87,7 +91,7 @@
   height: 22px;
   border-radius: 50%;
   background: var(--accent-gold-dim);
-  color: var(--accent-gold);
+  color: var(--accent-orange);
   font-size: 11px;
   font-family: var(--font-mono);
   font-weight: 700;
@@ -102,7 +106,7 @@
   height: 28px;
   border-radius: var(--radius-sm);
   background: var(--bg-surface);
-  color: var(--accent-gold);
+  color: var(--accent-orange);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,7 +116,7 @@
 .step-icon svg {
   width: 16px;
   height: 16px;
-  color: var(--accent-gold);
+  color: var(--accent-orange);
 }
 
 .step-info {
@@ -145,7 +149,7 @@
 .step-arrow svg {
   width: 14px;
   height: 14px;
-  color: var(--accent-gold);
+  color: var(--accent-orange);
   opacity: 0.9;
   animation: bounceDown 2s infinite ease-in-out;
 }
@@ -171,8 +175,8 @@
   width: 84px;
   height: 84px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.20) 0%, rgba(17, 17, 17, 0.6) 70%);
-  border: 1px solid var(--accent-gold);
+  background: radial-gradient(circle, rgba(178, 44, 69, 0.32) 0%, rgba(58, 29, 44, 0.85) 70%);
+  border: 1px solid var(--accent-crimson);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -183,7 +187,7 @@
 .shield-circle svg {
   width: 42px;
   height: 42px;
-  color: var(--accent-gold);
+  color: var(--accent-orange);
 }
 
 .patent-steps-list {
@@ -207,7 +211,7 @@
 .patent-step-card svg {
   width: 16px;
   height: 16px;
-  color: var(--accent-gold);
+  color: var(--accent-orange);
   flex-shrink: 0;
 }
 
@@ -220,7 +224,7 @@
 .pipeline-tooltip {
   margin-top: var(--space-3);
   padding: 8px 12px;
-  background: rgba(212, 175, 55, 0.10);
+  background: rgba(178, 44, 69, 0.15);
   border: 1px dashed var(--border-accent);
   border-radius: var(--radius-sm);
   font-size: 11px;
