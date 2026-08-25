@@ -135,7 +135,7 @@
     });
   });
 
-  // --- 5. CONTACT FORM TO MAILTO ---
+  // --- 5. CONTACT FORM TO GMAIL COMPOSE ---
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
@@ -147,9 +147,9 @@
       const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
       const body = encodeURIComponent(`Hi Shijitha,\n\n${message}\n\nFrom:\n${name}\nEmail: ${email}`);
       
-      const mailtoUrl = `mailto:shijithajenifer2005@gmail.com?subject=${subject}&body=${body}`;
-      window.location.href = mailtoUrl;
-      window.showToast('Opening your email client to send message...');
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=shijithajenifer2005@gmail.com&su=${subject}&body=${body}`;
+      window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+      window.showToast('Opening Gmail to compose message...');
     });
   }
 })();
