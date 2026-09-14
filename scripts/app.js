@@ -6,26 +6,26 @@
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
-  // --- 0. THEME MANAGEMENT (DARK & PLUM ROSE) ---
+  // --- 0. THEME MANAGEMENT (DARK & LIGHT) ---
   const themeToggle = document.getElementById('themeToggle');
   const themeMeta = document.querySelector('meta[name="theme-color"]');
 
   const applyTheme = (theme) => {
-    const isPlum = theme === 'plum';
-    document.documentElement.setAttribute('data-theme', isPlum ? 'plum' : 'dark');
+    const isLight = theme === 'light';
+    document.documentElement.setAttribute('data-theme', isLight ? 'light' : 'dark');
     if (themeMeta) {
-      themeMeta.setAttribute('content', isPlum ? '#1D1024' : '#000000');
+      themeMeta.setAttribute('content', isLight ? '#FFFFFF' : '#000000');
     }
     if (themeToggle) {
       const label = themeToggle.querySelector('.theme-toggle-text');
-      if (label) label.textContent = isPlum ? 'Plum' : 'Dark';
+      if (label) label.textContent = isLight ? 'Light' : 'Dark';
       themeToggle.setAttribute(
         'aria-label',
-        isPlum ? 'Current theme: Plum. Click to switch to Dark.' : 'Current theme: Dark. Click to switch to Plum.'
+        isLight ? 'Current theme: Light. Click to switch to Dark.' : 'Current theme: Dark. Click to switch to Light.'
       );
-      themeToggle.setAttribute('title', isPlum ? 'Switch to Dark theme' : 'Switch to Plum theme');
+      themeToggle.setAttribute('title', isLight ? 'Switch to Dark theme' : 'Switch to Light theme');
     }
-    window.dispatchEvent(new CustomEvent('themechange', { detail: { theme: isPlum ? 'plum' : 'dark' } }));
+    window.dispatchEvent(new CustomEvent('themechange', { detail: { theme: isLight ? 'light' : 'dark' } }));
   };
 
   let initialTheme = document.documentElement.getAttribute('data-theme');
@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme') === 'plum' ? 'plum' : 'dark';
-      const nextTheme = current === 'plum' ? 'dark' : 'plum';
+      const current = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+      const nextTheme = current === 'light' ? 'dark' : 'light';
       try {
         localStorage.setItem('portfolio-theme', nextTheme);
       } catch (e) {}

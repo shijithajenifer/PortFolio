@@ -16,7 +16,7 @@
   // Check if reduced motion is preferred
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Palette color definitions for both Dark and Plum Rose themes
+  // Palette color definitions for Dark and Light themes (Exact same dark-theme accents)
   const PALETTES = {
     dark: {
       plum: 'rgba(70, 36, 53,',
@@ -25,17 +25,19 @@
       warmRed: 'rgba(203, 58, 53,',
       orange: 'rgba(232, 89, 42,'
     },
-    plum: {
-      plum: 'rgba(64, 33, 78,',
-      burgundy: 'rgba(122, 59, 116,',
-      crimson: 'rgba(122, 59, 116,',
-      warmRed: 'rgba(168, 82, 146,',
-      orange: 'rgba(240, 183, 166,'
+    light: {
+      plum: 'rgba(70, 36, 53,',
+      burgundy: 'rgba(116, 55, 73,',
+      crimson: 'rgba(178, 44, 69,',
+      warmRed: 'rgba(203, 58, 53,',
+      orange: 'rgba(232, 89, 42,'
     }
   };
 
-  const getThemeName = () => (document.documentElement.getAttribute('data-theme') === 'plum' ? 'plum' : 'dark');
+  const getThemeName = () => (document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
   let currentPalette = PALETTES[getThemeName()];
+
+  const isLightMode = () => document.documentElement.getAttribute('data-theme') === 'light';
 
   const PALETTE = new Proxy({}, {
     get(_, prop) {
@@ -44,7 +46,7 @@
   });
 
   window.addEventListener('themechange', (e) => {
-    const themeName = e.detail && e.detail.theme === 'plum' ? 'plum' : 'dark';
+    const themeName = e.detail && e.detail.theme === 'light' ? 'light' : 'dark';
     currentPalette = PALETTES[themeName];
   });
 
@@ -56,14 +58,17 @@
     ctx.translate(cx, cy);
     ctx.rotate(rotation);
 
+    const light = isLightMode();
+
     // 1. Soft outer glow halo
-    const glowGrad = ctx.createRadialGradient(0, 0, 0, 0, 0, outerRadius * 1.6);
-    glowGrad.addColorStop(0, `${colorPrefix}${alpha * 0.7})`);
-    glowGrad.addColorStop(0.5, `${colorPrefix}${alpha * 0.2})`);
+    const glowRadius = outerRadius * (light ? 1.75 : 1.6);
+    const glowGrad = ctx.createRadialGradient(0, 0, 0, 0, 0, glowRadius);
+    glowGrad.addColorStop(0, `${colorPrefix}${alpha * (light ? 0.85 : 0.7)})`);
+    glowGrad.addColorStop(0.5, `${colorPrefix}${alpha * (light ? 0.35 : 0.2)})`);
     glowGrad.addColorStop(1, `${colorPrefix}0)`);
     ctx.fillStyle = glowGrad;
     ctx.beginPath();
-    ctx.arc(0, 0, outerRadius * 1.6, 0, Math.PI * 2);
+    ctx.arc(0, 0, glowRadius, 0, Math.PI * 2);
     ctx.fill();
 
     // 2. 4-pointed star rays (horizontal & vertical light beams)
@@ -85,13 +90,13 @@
       rot += step;
     }
     ctx.closePath();
-    ctx.fillStyle = `${colorPrefix}${alpha})`;
+    ctx.fillStyle = `${colorPrefix}${Math.min(1, alpha * (light ? 1.25 : 1.0))})`;
     ctx.fill();
 
     // 3. Bright central sparkle point
     ctx.beginPath();
     ctx.arc(0, 0, innerRadius * 0.85, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(253, 249, 250, ${alpha * 0.95})`;
+    ctx.fillStyle = light ? `${colorPrefix}${Math.min(1, alpha * 1.5)})` : `rgba(253, 249, 250, ${alpha * 0.95})`;
     ctx.fill();
 
     ctx.restore();
@@ -204,12 +209,15 @@
       }
 
       draw() {
-        const currentAlpha = Math.max(0.08, this.baseAlpha + Math.sin(this.phase) * 0.15);
+        const light = isLightMode();
+        const currentAlpha = Math.max(light ? 0.18 : 0.08, this.baseAlpha * (light ? 1.25 : 1.0) + Math.sin(this.phase) * 0.15);
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.fillStyle = `${this.color}${currentAlpha})`;
-        ctx.shadowColor = `${this.color}0.4)`;
-        ctx.shadowBlur = 6;
+        if (!light) {
+          ctx.shadowColor = `${this.color}0.4)`;
+          ctx.shadowBlur = 6;
+        }
         ctx.fill();
         ctx.shadowBlur = 0;
       }
@@ -342,12 +350,12 @@
             const dist = Math.sqrt(dx * dx + dy * dy);
 
             if (dist < maxDist) {
-              const opacity = (1 - dist / maxDist) * 0.12;
+              const opacity = (1 - dist / maxDist) * (isLightMode() ? 0.22 : 0.12);
               ctx.beginPath();
               ctx.moveTo(dots[i].x, dots[i].y);
               ctx.lineTo(dots[j].x, dots[j].y);
               ctx.strokeStyle = `${PALETTE.crimson}${opacity})`;
-              ctx.lineWidth = 0.65;
+              ctx.lineWidth = isLightMode() ? 0.85 : 0.65;
               ctx.stroke();
             }
           }
@@ -440,7 +448,8 @@
       }
 
       draw() {
-        const currentAlpha = Math.max(0.06, this.baseAlpha * (0.4 + 0.6 * Math.sin(this.phase)));
+        const light = isLightMode();
+        const currentAlpha = Math.max(light ? 0.16 : 0.06, this.baseAlpha * (light ? 1.35 : 1.0) * (0.4 + 0.6 * Math.sin(this.phase)));
         if (this.isStar) {
           drawTwinkleStar(ctx, this.x, this.y, 4, this.radius, this.radius * 0.25, this.color, currentAlpha, this.rot);
         } else {
