@@ -6,6 +6,49 @@
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
+  // --- 0. THEME MANAGEMENT (DARK & PLUM ROSE) ---
+  const themeToggle = document.getElementById('themeToggle');
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+  const applyTheme = (theme) => {
+    const isPlum = theme === 'plum';
+    document.documentElement.setAttribute('data-theme', isPlum ? 'plum' : 'dark');
+    if (themeMeta) {
+      themeMeta.setAttribute('content', isPlum ? '#1D1024' : '#000000');
+    }
+    if (themeToggle) {
+      const label = themeToggle.querySelector('.theme-toggle-text');
+      if (label) label.textContent = isPlum ? 'Plum' : 'Dark';
+      themeToggle.setAttribute(
+        'aria-label',
+        isPlum ? 'Current theme: Plum. Click to switch to Dark.' : 'Current theme: Dark. Click to switch to Plum.'
+      );
+      themeToggle.setAttribute('title', isPlum ? 'Switch to Dark theme' : 'Switch to Plum theme');
+    }
+    window.dispatchEvent(new CustomEvent('themechange', { detail: { theme: isPlum ? 'plum' : 'dark' } }));
+  };
+
+  let initialTheme = document.documentElement.getAttribute('data-theme');
+  if (!initialTheme) {
+    try {
+      initialTheme = localStorage.getItem('portfolio-theme') || 'dark';
+    } catch (e) {
+      initialTheme = 'dark';
+    }
+  }
+  applyTheme(initialTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') === 'plum' ? 'plum' : 'dark';
+      const nextTheme = current === 'plum' ? 'dark' : 'plum';
+      try {
+        localStorage.setItem('portfolio-theme', nextTheme);
+      } catch (e) {}
+      applyTheme(nextTheme);
+    });
+  }
+
   // --- 1. STICKY NAVBAR SCROLL EFFECT ---
   const navbar = document.getElementById('navbar');
   const handleScroll = () => {

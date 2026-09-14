@@ -113,7 +113,15 @@
     'etl-3': 'Pandas Transform: Cleaning missing fields, type coercion, timestamp alignment, and metric calculations.',
     'etl-4': 'Load Pipeline: Clean structured tables are loaded transactionally into relational tables.',
     'etl-5': 'SQLite Relational Storage: Compact, self-contained SQL database storing historical and recent stock states.',
-    'etl-6': 'Streamlit Analytics: Interactive dashboard rendering charts, price trends, and summary metrics.'
+    'etl-6': 'Streamlit Analytics: Interactive dashboard rendering charts, price trends, and summary metrics.',
+
+    // Cloud Cost Optimizer AI Agent
+    'opt-1': 'Resource Ingestion: Ingests raw cloud usage CSV data including CPU utilization, storage capacity, and monthly cost records.',
+    'opt-2': 'Analyze Phase: Scans metrics to detect idle compute resources (<5% CPU) and unattached or low-utilization storage waste (<20%).',
+    'opt-3': 'Evaluate Phase: Identifies oversized/under-utilized compute (5–20% CPU) and calculates potential cost-reduction margins.',
+    'opt-4': 'Recommend Engine: Generates prioritized cost-saving recommendations and converts values using live currency exchange-rate APIs.',
+    'opt-5': 'Verify Loop: Validates savings logic against confidence thresholds (loops back for refinement if confidence score is <75%).',
+    'opt-6': 'Streamlit UI & Export: Delivers interactive Streamlit dashboard analytics, GitHub REST API stats, SQLite history, and downloadable PDF reports.'
   };
 
   const pipelineSteps = document.querySelectorAll('.pipeline-step[data-step]');

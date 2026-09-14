@@ -15,6 +15,20 @@
   <meta property="og:url" content="https://shijithajenifer.github.io">
   <meta name="theme-color" content="#000000">
 
+  <!-- Early Theme Initialization to Prevent FOUC -->
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('portfolio-theme');
+        if (t === 'plum') {
+          document.documentElement.setAttribute('data-theme', 'plum');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch(e) {}
+    })();
+  </script>
+
   <!-- Google Fonts Preconnect & Stylesheet -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,6 +100,14 @@
       </ul>
 
       <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Current theme: Dark. Click to switch to Plum." title="Switch theme">
+          <span class="theme-toggle-icon" aria-hidden="true">
+            <svg class="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg class="theme-icon-plum" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </span>
+          <span class="theme-toggle-text">Dark</span>
+        </button>
+
         <button class="btn btn-sm btn-secondary" onclick="handleResumeDownload(event)" aria-label="Download Resume">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
           <span>Resume</span>
@@ -464,7 +486,190 @@
         </div>
 
         <div class="projects-container">
-          <!-- PROJECT 1: IT HELPDESK CHATBOT -->
+          <!-- PROJECT 1: CLOUD COST OPTIMIZER AI AGENT -->
+          <article class="project-card reveal">
+            <div class="project-content-grid">
+              <div class="project-info-side">
+                <div class="project-meta-top">
+                  <span class="project-tag">AI Agent / Cloud / Analytics</span>
+                  <span class="timeline-period" style="font-size: 11px; padding: 2px 8px;">2026</span>
+                </div>
+
+                <h3 class="project-title">Cloud Cost Optimizer AI Agent</h3>
+                <p class="project-description">
+                  An AI-powered cloud cost optimization dashboard that analyzes cloud resource usage, detects idle and oversized resources, identifies storage waste, and generates actionable cost-saving recommendations.
+                </p>
+
+                <!-- Structured: Problem -> Technology -> Solution -> Result -->
+                <div class="project-problem-solution">
+                  <div class="prob-sol-item">
+                    <span class="prob-sol-label">Problem:</span>
+                    <span>Unmonitored cloud resources, idle compute instances, and oversized allocations lead to runaway infrastructure expenses and wasted operational budgets.</span>
+                  </div>
+                  <div class="prob-sol-item">
+                    <span class="prob-sol-label tech">Technology:</span>
+                    <span>Python, Streamlit, SQLite, REST APIs, GitHub REST API, AI/Agent Workflow, Data Analysis, PDF Reports.</span>
+                  </div>
+                  <div class="prob-sol-item">
+                    <span class="prob-sol-label sol">Solution:</span>
+                    <span>Engineered an AI agent loop (Analyze → Evaluate → Recommend → Verify → Final Report) that identifies idle compute, flags storage waste, and supports multi-currency cost conversions.</span>
+                  </div>
+                  <div class="prob-sol-item">
+                    <span class="prob-sol-label res">Result / Impact:</span>
+                    <span>Automates cloud spend optimization through an interactive Streamlit dashboard, SQLite run persistence, and downloadable audit-ready PDF executive reports.</span>
+                  </div>
+                </div>
+
+                <ul class="project-points-list">
+                  <li class="project-point">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Detects idle cloud resources using CPU utilization thresholds</span>
+                  </li>
+                  <li class="project-point">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Detects oversized/under-utilized compute resources</span>
+                  </li>
+                  <li class="project-point">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Detects storage waste across unattached and low-utilization volumes</span>
+                  </li>
+                  <li class="project-point">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Generates actionable cost-saving recommendations</span>
+                  </li>
+                  <li class="project-point">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Uses an Analyze → Evaluate → Recommend → Verify → Final Report workflow</span>
+                  </li>
+                  <li class="project-point">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Stores analysis history and past optimization runs using SQLite</span>
+                  </li>
+                  <li class="project-point">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Supports multiple currencies using exchange-rate API integration and generates PDF reports</span>
+                  </li>
+                  <li class="project-point">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Provides an interactive Streamlit dashboard and integrates with GitHub REST API for repository analytics</span>
+                  </li>
+                </ul>
+
+                <div class="project-tech-stack">
+                  <span class="tech-badge">Python</span>
+                  <span class="tech-badge">Streamlit</span>
+                  <span class="tech-badge">SQLite</span>
+                  <span class="tech-badge">REST APIs</span>
+                  <span class="tech-badge">GitHub REST API</span>
+                  <span class="tech-badge">AI/Agent Workflow</span>
+                  <span class="tech-badge">Data Analysis</span>
+                  <span class="tech-badge">PDF Reports</span>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://github.com/shijithajenifer/Cloud-cost-optimizer" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" aria-label="View Cloud Cost Optimizer AI Agent repository on GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    <span>GitHub Repository</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Technical Visual: Agent Architecture Flow -->
+              <div class="project-visual-side">
+                <div class="arch-visual-container">
+                  <div class="arch-visual-header">
+                    <div class="arch-visual-title">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                      <span>AI Agent Optimization Loop</span>
+                    </div>
+                    <span class="arch-status-pill"><span class="arch-status-dot"></span> Agent Loop</span>
+                  </div>
+
+                  <div class="pipeline-flow">
+                    <div class="pipeline-step" data-step="opt-1">
+                      <div class="step-num">1</div>
+                      <div class="step-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                      </div>
+                      <div class="step-info">
+                        <div class="step-title">Resource Ingestion</div>
+                        <div class="step-sub">Usage & Spend Metrics</div>
+                      </div>
+                    </div>
+
+                    <div class="step-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+
+                    <div class="pipeline-step" data-step="opt-2">
+                      <div class="step-num">2</div>
+                      <div class="step-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                      </div>
+                      <div class="step-info">
+                        <div class="step-title">Analyze: Idle & Waste Detection</div>
+                        <div class="step-sub">Flags &lt;5% CPU & Low Storage</div>
+                      </div>
+                    </div>
+
+                    <div class="step-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+
+                    <div class="pipeline-step" data-step="opt-3">
+                      <div class="step-num">3</div>
+                      <div class="step-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                      </div>
+                      <div class="step-info">
+                        <div class="step-title">Evaluate: Oversized Compute</div>
+                        <div class="step-sub">5–20% CPU & Multi-Currency FX</div>
+                      </div>
+                    </div>
+
+                    <div class="step-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+
+                    <div class="pipeline-step" data-step="opt-4">
+                      <div class="step-num">4</div>
+                      <div class="step-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                      </div>
+                      <div class="step-info">
+                        <div class="step-title">Recommend: Savings Engine</div>
+                        <div class="step-sub">Prioritized Reduction Actions</div>
+                      </div>
+                    </div>
+
+                    <div class="step-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+
+                    <div class="pipeline-step" data-step="opt-5">
+                      <div class="step-num">5</div>
+                      <div class="step-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                      </div>
+                      <div class="step-info">
+                        <div class="step-title">Verify: Confidence Loop</div>
+                        <div class="step-sub">Validates Score (&lt;75% loops back)</div>
+                      </div>
+                    </div>
+
+                    <div class="step-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+
+                    <div class="pipeline-step" data-step="opt-6">
+                      <div class="step-num">6</div>
+                      <div class="step-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                      </div>
+                      <div class="step-info">
+                        <div class="step-title">Streamlit UI & PDF Report</div>
+                        <div class="step-sub">SQLite History & Audit Export</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pipeline-tooltip">Click any stage above to inspect details.</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: IT HELPDESK CHATBOT -->
           <article class="project-card reveal">
             <div class="project-content-grid">
               <div class="project-info-side">
@@ -633,7 +838,7 @@
             </div>
           </article>
 
-          <!-- PROJECT 2: REAL-TIME STOCK DATA ETL PIPELINE -->
+          <!-- PROJECT 3: REAL-TIME STOCK DATA ETL PIPELINE -->
           <article class="project-card reveal">
             <div class="project-content-grid">
               <div class="project-info-side">

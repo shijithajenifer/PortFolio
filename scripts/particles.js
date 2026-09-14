@@ -16,14 +16,37 @@
   // Check if reduced motion is preferred
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Palette color definitions
-  const PALETTE = {
-    plum: 'rgba(70, 36, 53,',
-    burgundy: 'rgba(116, 55, 73,',
-    crimson: 'rgba(178, 44, 69,',
-    warmRed: 'rgba(203, 58, 53,',
-    orange: 'rgba(232, 89, 42,'
+  // Palette color definitions for both Dark and Plum Rose themes
+  const PALETTES = {
+    dark: {
+      plum: 'rgba(70, 36, 53,',
+      burgundy: 'rgba(116, 55, 73,',
+      crimson: 'rgba(178, 44, 69,',
+      warmRed: 'rgba(203, 58, 53,',
+      orange: 'rgba(232, 89, 42,'
+    },
+    plum: {
+      plum: 'rgba(64, 33, 78,',
+      burgundy: 'rgba(122, 59, 116,',
+      crimson: 'rgba(122, 59, 116,',
+      warmRed: 'rgba(168, 82, 146,',
+      orange: 'rgba(240, 183, 166,'
+    }
   };
+
+  const getThemeName = () => (document.documentElement.getAttribute('data-theme') === 'plum' ? 'plum' : 'dark');
+  let currentPalette = PALETTES[getThemeName()];
+
+  const PALETTE = new Proxy({}, {
+    get(_, prop) {
+      return currentPalette[prop] || PALETTES.dark[prop];
+    }
+  });
+
+  window.addEventListener('themechange', (e) => {
+    const themeName = e.detail && e.detail.theme === 'plum' ? 'plum' : 'dark';
+    currentPalette = PALETTES[themeName];
+  });
 
   /**
    * Helper to draw a delicate 4-pointed twinkling star
@@ -286,6 +309,9 @@
     }
 
     initParticles();
+    window.addEventListener('themechange', () => {
+      initParticles();
+    });
 
     // Reduced motion: static draw once and exit
     if (prefersReducedMotion) {
@@ -434,6 +460,9 @@
     }
 
     initAmbient();
+    window.addEventListener('themechange', () => {
+      initAmbient();
+    });
 
     if (prefersReducedMotion) {
       ctx.clearRect(0, 0, width, height);

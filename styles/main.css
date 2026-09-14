@@ -74,6 +74,24 @@
   --text-inverse: #FFFFFF;
   --text-dark: #000000;
 
+  /* Surface and Component Tokens */
+  --navbar-bg: rgba(0, 0, 0, 0.85);
+  --navbar-bg-scrolled: rgba(0, 0, 0, 0.95);
+  --nav-mobile-bg: rgba(58, 29, 44, 0.98);
+
+  /* Orb & Background Gradients */
+  --orb-grad-1: radial-gradient(circle, rgba(116, 55, 73, 0.35) 0%, rgba(178, 44, 69, 0.15) 45%, transparent 70%);
+  --orb-grad-2: radial-gradient(circle, rgba(178, 44, 69, 0.28) 0%, rgba(203, 58, 53, 0.16) 40%, rgba(232, 89, 42, 0.08) 60%, transparent 75%);
+  --orb-grad-3: radial-gradient(circle, rgba(116, 55, 73, 0.28) 0%, rgba(203, 58, 53, 0.12) 50%, transparent 75%);
+  --orb-grad-4: radial-gradient(circle, rgba(178, 44, 69, 0.25) 0%, rgba(232, 89, 42, 0.1) 45%, transparent 70%);
+  --hero-glow: radial-gradient(circle, rgba(178, 44, 69, 0.16) 0%, rgba(116, 55, 73, 0.08) 45%, transparent 70%);
+  --profile-frame-glow: linear-gradient(135deg, rgba(70, 36, 53, 0.45) 0%, rgba(116, 55, 73, 0.35) 30%, rgba(178, 44, 69, 0.28) 65%, rgba(232, 89, 42, 0.18) 100%);
+  --profile-border-grad: linear-gradient(135deg, #462435 0%, #743749 25%, #B22C45 55%, #CB3A35 80%, #E8592A 100%);
+  --scrollbar-thumb: #462435;
+  --scrollbar-thumb-hover: #B22C45;
+  --scrollbar-track: #000000;
+  --selection-bg: rgba(178, 44, 69, 0.35);
+
   /* Typography Fonts */
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -125,7 +143,102 @@
   /* Transitions */
   --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
   --transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   THEME B: PLUM ROSE PALETTE
+   Primary background:     #1D1024
+   Secondary dark purple:  #40214E
+   Primary accent:         #7A3B74
+   Light accent / text:    #E4D3EA
+   Soft highlight:         #F0B7A6
+   ========================================================================== */
+[data-theme="plum"] {
+  --bg-primary: #1D1024;
+  --bg-secondary: #25142E;
+  --bg-card: rgba(64, 33, 78, 0.35);
+  --bg-card-hover: rgba(122, 59, 116, 0.3);
+  --bg-card-solid: #40214E;
+  --bg-surface: rgba(64, 33, 78, 0.48);
+  --bg-surface-active: rgba(122, 59, 116, 0.38);
+
+  /* Contrast / Elevated Dark Sections */
+  --bg-dark-section: #180D1F;
+  --bg-dark-card: rgba(64, 33, 78, 0.45);
+  --bg-dark-surface: rgba(122, 59, 116, 0.28);
+
+  /* Borders & Dividers */
+  --border-subtle: rgba(122, 59, 116, 0.32);
+  --border-medium: rgba(122, 59, 116, 0.52);
+  --border-dark: rgba(64, 33, 78, 0.72);
+  --border-accent: rgba(240, 183, 166, 0.4);
+  --border-accent-strong: #7A3B74;
+
+  /* Named Palette Colors */
+  --color-black: #1D1024;
+  --color-plum: #40214E;
+  --color-burgundy: #7A3B74;
+  --color-crimson: #7A3B74;
+  --color-warm-red: #91458A;
+  --color-orange: #F0B7A6;
+
+  /* Primary Accent & Glows */
+  --accent-gold: #7A3B74;
+  --accent-gold-hover: #91458A;
+  --accent-gold-dim: rgba(122, 59, 116, 0.22);
+  --accent-crimson: #7A3B74;
+  --accent-crimson-dim: rgba(122, 59, 116, 0.22);
+  --accent-warm-red: #91458A;
+  --accent-warm-red-dim: rgba(145, 69, 138, 0.22);
+  --accent-orange: #F0B7A6;
+  --accent-orange-dim: rgba(240, 183, 166, 0.16);
+
+  --accent-glow: 0 0 28px rgba(122, 59, 116, 0.38);
+  --accent-glow-sm: 0 0 14px rgba(240, 183, 166, 0.25);
+  --accent-glow-orange: 0 0 20px rgba(240, 183, 166, 0.3);
+  --accent-gradient: linear-gradient(135deg, #7A3B74 0%, #91458A 55%, #A85292 100%);
+  --accent-gradient-text: linear-gradient(90deg, #FFFFFF 0%, #E4D3EA 50%, #F0B7A6 100%);
+  --accent-gradient-subtle: linear-gradient(135deg, rgba(64, 33, 78, 0.5) 0%, rgba(122, 59, 116, 0.3) 50%, rgba(240, 183, 166, 0.12) 100%);
+
+  /* Backward-compatible variable aliases */
+  --accent-terracotta: #91458A;
+  --accent-terracotta-dim: rgba(145, 69, 138, 0.22);
+  --accent-green: #7A3B74;
+  --accent-green-dim: rgba(122, 59, 116, 0.22);
+  --accent-sand: #E4D3EA;
+  --accent-sand-dim: rgba(228, 211, 234, 0.18);
+
+  /* Typography Colors */
+  --text-primary: #FFFFFF;
+  --text-secondary: #E4D3EA;
+  --text-muted: #BCA8C2;
+  --text-inverse: #1D1024;
+  --text-dark: #1D1024;
+
+  /* Surface and Component Tokens */
+  --navbar-bg: rgba(29, 16, 36, 0.88);
+  --navbar-bg-scrolled: rgba(29, 16, 36, 0.96);
+  --nav-mobile-bg: rgba(29, 16, 36, 0.98);
+
+  /* Orb & Background Gradients */
+  --orb-grad-1: radial-gradient(circle, rgba(122, 59, 116, 0.34) 0%, rgba(64, 33, 78, 0.2) 45%, transparent 70%);
+  --orb-grad-2: radial-gradient(circle, rgba(122, 59, 116, 0.3) 0%, rgba(145, 69, 138, 0.18) 40%, rgba(240, 183, 166, 0.08) 60%, transparent 75%);
+  --orb-grad-3: radial-gradient(circle, rgba(64, 33, 78, 0.36) 0%, rgba(122, 59, 116, 0.16) 50%, transparent 75%);
+  --orb-grad-4: radial-gradient(circle, rgba(122, 59, 116, 0.26) 0%, rgba(240, 183, 166, 0.12) 45%, transparent 70%);
+  --hero-glow: radial-gradient(circle, rgba(122, 59, 116, 0.22) 0%, rgba(64, 33, 78, 0.12) 45%, transparent 70%);
+  --profile-frame-glow: linear-gradient(135deg, rgba(64, 33, 78, 0.55) 0%, rgba(122, 59, 116, 0.42) 30%, rgba(145, 69, 138, 0.3) 65%, rgba(240, 183, 166, 0.18) 100%);
+  --profile-border-grad: linear-gradient(135deg, #40214E 0%, #7A3B74 35%, #91458A 70%, #F0B7A6 100%);
+  --scrollbar-thumb: #40214E;
+  --scrollbar-thumb-hover: #7A3B74;
+  --scrollbar-track: #1D1024;
+  --selection-bg: rgba(122, 59, 116, 0.45);
+
+  /* Shadows - Elevated Plum depth */
+  --shadow-sm: 0 2px 8px rgba(12, 6, 15, 0.6);
+  --shadow-md: 0 6px 20px rgba(12, 6, 15, 0.75);
+  --shadow-lg: 0 14px 40px rgba(12, 6, 15, 0.9);
+  --shadow-card: 0 4px 24px rgba(12, 6, 15, 0.6);
 }
 
 /* Base Reset */
@@ -144,6 +257,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  transition: background-color var(--transition-smooth), color var(--transition-smooth);
 }
 
 body {
@@ -154,11 +268,12 @@ body {
   font-size: var(--text-base);
   line-height: 1.65;
   letter-spacing: -0.01em;
+  transition: background-color var(--transition-smooth), color var(--transition-smooth);
 }
 
 /* Selection */
 ::selection {
-  background-color: rgba(178, 44, 69, 0.35);
+  background-color: var(--selection-bg);
   color: #FFFFFF;
 }
 
@@ -168,16 +283,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: var(--scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #462435;
+  background: var(--scrollbar-thumb);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-crimson);
+  background: var(--scrollbar-thumb-hover);
 }
 
 /* Layout Containers */
